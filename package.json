@@ -1,0 +1,11 @@
+{
+  "name": "sassy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass css/main.scss css/main.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
