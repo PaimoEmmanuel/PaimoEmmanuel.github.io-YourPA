@@ -13,9 +13,16 @@ $borders: 15px;
     @return map-get($colors, $color-name)
 }
 $desktop: 840px;
+$min-desktop: 740px;
 
 @mixin desktop{
     @media ( min-width: #{$desktop} ) {
+        @content;
+    }
+}
+
+@mixin min-desktop{
+    @media ( min-width: #{$min-desktop} ) {
         @content;
     }
 }
@@ -27,6 +34,7 @@ body{
     height: 100%;
     font-family: montserrat;
     margin: 0;
+    overflow: hidden;
     .bg{
     background-color: color(primary);
     clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);    
@@ -111,6 +119,11 @@ main{
             @include desktop{
                 width: 30%;
                 font-size: 4em;
+                line-height: .9em;
+            }
+            @include min-desktop{
+                width: 30%;
+                font-size: 3em;
                 line-height: .9em;
             }
         }
